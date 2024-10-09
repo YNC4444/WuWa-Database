@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+/* Header Styles */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  margin: 20px;
+}
+
+#site-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-left: auto;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.page-title {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+}
+
+/* Card Styles */
+.card {
+  width: 25em;
+  border: 2px solid;
+  border-radius: 5px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px;
+  gap: 5px;
+  height: 100%;
+}
+
+img {
+  max-width: 24em;
+}
+
+.CharacterImg {
+  border: 1px solid;
+}
+
+/* Fact Styles */
+.Facts {
+  margin-left: 28px;
+}
+
+.Facts div {
+  display: flex;
+  align-items: center;
+}
+
+.Facts h4 {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.Facts p {
+  margin: 0;
+}
+
+.CharacterFacts {
+  align-self: flex-start;
+  margin-top: 1.25em;
+  margin-left: 0;
+}
+
+h4.CharacterDescription {
+  margin-top: 0;
+}
+
+.price {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.index {
+  display: flex;
+  justify-content: center;
+}
+
+.imgAndFacts {
+  display: flex;
+}
+
+/* Create page (forms) */
+.forms{
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description{
+  display: flex;
+}

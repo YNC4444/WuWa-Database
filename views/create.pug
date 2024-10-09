@@ -1,0 +1,152 @@
+extends common/layout
+
+block layout-content 
+  .content 
+    h1.page-title Add New Characters or Weapons 
+    .forms
+      form(method="post", action="/admin/add/character")
+        h2 Add new characters
+        div 
+          label(for="name") Name: 
+          input(type="text", id="name", name="name")
+        div 
+          label(for="rarity") Rarity:
+          div 
+            <input type="radio", id="rarity", name="rarity", value="4"> 4
+          div 
+            <input type="radio", id="rarity", name="rarity", value="5"> 5
+        div 
+          label(for="element") Element: 
+          div 
+            <input type="radio", id="element", name="element", value="Aero"> Aero 
+          div 
+            <input type="radio", id="element", name="element", value="Electro"> Electro 
+          div 
+            <input type="radio", id="element", name="element", value="Fusion"> Fusion 
+          div 
+            <input type="radio", id="element", name="element", value="Glacio"> Glacio 
+          div 
+            <input type="radio", id="element", name="element", value="Havoc"> Havoc 
+          div 
+            <input type="radio", id="element", name="element", value="Spectro"> Spectro 
+        div 
+          label(for="weapon_class") Weapon Class: 
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Broadblade"> Broadblade
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Sword"> Sword
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Pistols"> Pistols
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Gauntlet"> Gauntlet
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Rectifier"> Rectifier
+          div.description 
+            label(for="description") Description: 
+            textarea(name="description", id="description") 
+        button(type="submit", value="add-character") Add Character
+      form(method="post", action="/admin/add/weapon")
+        h2 Add new weapons
+        div 
+          label(for="name") Name: 
+          input(type="text", id="name", name="name")
+        div 
+          label(for="rarity") Rarity: 
+          div 
+            <input type="radio", id="rarity", name="rarity", value="1"> 1
+          div 
+            <input type="radio", id="rarity", name="rarity", value="2"> 2
+          div 
+            <input type="radio", id="rarity", name="rarity", value="3"> 3
+          div 
+            <input type="radio", id="rarity", name="rarity", value="4"> 4
+          div 
+            <input type="radio", id="rarity", name="rarity", value="5"> 5
+        div 
+          label(for="class") Weapon Class: 
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Broadblade"> Broadblade
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Sword"> Sword
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Pistols"> Pistols
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Gauntlet"> Gauntlet
+          div 
+            <input type="radio", id="weapon_class", name="weapon_class", value="Rectifier"> Rectifier
+        div 
+          label(for="base_atk") Attack (lvl 90): 
+          fieldset 5-star
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="587.5"> 587.5
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="500.0"> 500.0
+          fieldset 4-star
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="412.5"> 412.5
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="387.5"> 387.5
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="337.5"> 337.5
+          fieldset 3-star
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="325.0"> 325.0
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="300.0"> 300.0
+          fieldset 2-star and below
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="275.0"> 275.0
+            div 
+              <input type="radio", id="base_atk", name="base_atk", value="250.0"> 250.0
+        div 
+          label(for="2nd_stat") Secondary Stat: 
+          div 
+            <input type="radio", id="2nd_stat", name="2nd_stat", value="ATK"> ATK 
+          div 
+            <input type="radio", id="2nd_stat", name="2nd_stat", value="Crit DMG"> Crit DMG 
+          div 
+            <input type="radio", id="2nd_stat", name="2nd_stat", value="Crit Rate"> Crit Rate 
+          div 
+            <input type="radio", id="2nd_stat", name="2nd_stat", value="DEF"> DEF
+          div 
+            <input type="radio", id="2nd_stat", name="2nd_stat", value="Energy Regen"> Energy Regen 
+          div 
+            <input type="radio", id="2nd_stat", name="2nd_stat", value="HP"> HP 
+        div 
+          label(for="2nd_stat_value_%") Secondary Stat Value (lvl 90, %): 
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="61.56"> 61.56
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="54.00"> 54.00
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="51.84"> 51.84
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="48.60"> 48.60
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="40.50"> 40.50
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="38.88"> 38.88
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="38.48"> 38.48
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="36.45"> 36.45
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="36.00"> 36.00
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="32.40"> 32.40
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="30.78"> 30.78
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="30.38"> 30.38
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="24.30"> 24.30
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="20.25"> 20.25
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="14.85"> 14.85
+          div 
+            <input type="radio", id="2nd_stat_value_%", name="2nd_stat_value_%", value="11.47"> 11.47
+        div.description 
+          label(for="description") Description: 
+          textarea(name="description", id="description") 
+        button(type="submit", value="add-weapon") Add Weapon

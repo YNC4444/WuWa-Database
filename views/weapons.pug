@@ -1,0 +1,40 @@
+extends common/layout
+
+block layout-content 
+  .content 
+    h1.page-title Armory of Available Weapons 
+    div 
+      ul.container
+        each weapon in armory 
+           li.card 
+              div.cardContent
+                h3 Name: #{weapon.name}
+                div.imgAndFacts
+                  img(src=`/images/${weapon.image}`, alt=weapon.name)
+                  div.Facts
+                    div 
+                      h4 Rarity:
+                      p #{weapon.rarity}
+                    div 
+                      h4 Class:
+                      p  #{weapon.class}
+                    div 
+                      h4 Stats:
+                      p  ATK: #{weapon.base_atk} #{weapon['2nd_stat']}: #{weapon['2nd_stat_value_%']}%
+                div 
+                  h4 Description:
+                  p  #{weapon.description}
+                .Facts.price
+                  div  
+                    h4 Price: 
+                    p $#{weapon.price}   
+//- weapon image sources: 
+//- ages of harvest: https://static.wikia.nocookie.net/wutheringwaves/images/b/b2/Weapon_Ages_of_Harvest.png/revision/latest/scale-to-width-down/74?cb=20240628092550
+//- lustrous razor: https://static.wikia.nocookie.net/wutheringwaves/images/c/c1/Weapon_Lustrous_Razor.png/revision/latest/scale-to-width-down/74?cb=20240606152146
+//- Verdant_Summit: https://static.wikia.nocookie.net/wutheringwaves/images/e/e9/Weapon_Verdant_Summit.png/revision/latest/scale-to-width-down/74?cb=20240515175352
+//- Abyss_Surges: https://static.wikia.nocookie.net/wutheringwaves/images/b/be/Weapon_Abyss_Surges.png/revision/latest/scale-to-width-down/74?cb=20240606152429
+//- Blazing_Brilliance: https://static.wikia.nocookie.net/wutheringwaves/images/1/17/Weapon_Blazing_Brilliance.png/revision/latest/scale-to-width-down/74?cb=20240721155939
+//- Cosmic_Ripples: https://static.wikia.nocookie.net/wutheringwaves/images/3/38/Weapon_Cosmic_Ripples.png/revision/latest/scale-to-width-down/74?cb=20240515174847
+//- Emerald_of_Genesis: https://static.wikia.nocookie.net/wutheringwaves/images/d/d8/Weapon_Emerald_of_Genesis.png/revision/latest/scale-to-width-down/74?cb=20240514220335
+//- Static_Mist: https://static.wikia.nocookie.net/wutheringwaves/images/d/d2/Weapon_Static_Mist.png/revision/latest/scale-to-width-down/74?cb=20240515175305
+//- Stringmaster: https://static.wikia.nocookie.net/wutheringwaves/images/1/16/Weapon_Stringmaster.png/revision/latest/scale-to-width-down/74?cb=20240526010204

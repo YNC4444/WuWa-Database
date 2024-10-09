@@ -1,0 +1,60 @@
+extends common/layout
+
+block layout-content 
+  .content 
+    h1.page-title Roster of Available Characters 
+    div 
+      ul.container
+        each character in roster 
+           li.card 
+              div.cardContent
+                h3 Name: #{character.name}
+                img(src=`/images/${character.image}`, alt=character.name).CharacterImg
+                .Facts.CharacterFacts 
+                  div
+                    h4 Rarity: 
+                    p #{character.rarity}
+                  div
+                    h4 Element: 
+                    p #{character.element}
+                  div
+                    h4 Weapon Class: 
+                    p #{character.weapon_class}
+                div 
+                  h4.CharacterDescription Description: 
+                  p #{character.description}
+                .Facts.price
+                  div 
+                    h4 Price: 
+                    p $#{character.price}   
+    // character is a temp. variable, could be called anything
+//- img source urls:
+//- yinlin: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.ZMAoiNTpt_JSchxcaZfzMgHaEK%26pid%3DApi&f=1&ipt=5c0b2b52688c2b721f505983329e3cedf4b5700142aee8e7b0adc822b69681f0&ipo=images
+//- baizhi: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.SKdcDbMVZ3GgBVT3CcGSiwAAAA%26pid%3DApi&f=1&ipt=3a0208ce657b3e5c61b268e7c2d2440759c8271a60554941ecdbdb44f6eb73f6&ipo=images
+//- calcharo: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.-wTlmYUy_cefTnbEfKoAugHaEK%26pid%3DApi&f=1&ipt=ea41a8856b8bef0160f78fe768ce6663f9373ddbe9a6427399483bc74e9d8234&ipo=images
+//- verina: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.db9LySuDd7Qe7k6WEi_FUAHaEK%26pid%3DApi&f=1&ipt=e136277576b1f130a865d17a1bb5b42f83cf29c504f1efc17ca99a8d0ff5df2e&ipo=images
+//- taoqi: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.vNSLYmu9D4MMXJxouHGpXAHaEK%26pid%3DApi&f=1&ipt=22345489aec34ae7280d362ed9c6f2ebb4672b23c7c5bccc8c6670d404c0b4e8&ipo=images
+//- jianxin: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.a9TN3NOysQxj7oTZk3FwUwHaEK%26pid%3DApi&f=1&ipt=397fdd9ad0c4a102d0deb3e62ab7c5660ccd28c92d6d379672febf4cb6d1d896&ipo=images
+//- yuanwu: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwutheringwaves.gg%2Fwp-content%2Fuploads%2Fsites%2F8%2F2023%2F12%2FYuanwu.jpg&f=1&nofb=1&ipt=2b17af3d68e6413847a4772a37a169f2ad3681f4e1ae663ff220d8636968524a&ipo=images
+//- yangyang: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdotesports.com%2Fwp-content%2Fuploads%2F2024%2F05%2FWuthering-Waves-Yangyang.jpg&f=1&nofb=1&ipt=82489bbf8e5ddf0d1a172fee7a2d69106d5e67b0a9e80c2f3a00a1c25f662b3a&ipo=images
+//- sanhua: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FM2TAQF1Jauc%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=eb4f9fa1dcc3fb88f55838a669625ae73f95594c1617c2c5e89c99a614345a11&ipo=images
+//- Mortefi: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwutheringwaves.gg%2Fwp-content%2Fuploads%2Fsites%2F8%2F2023%2F11%2FMortefi.jpg&f=1&nofb=1&ipt=907753a18d5192d6d4b2b81b7cac6393d1b752b5456704b3a575640ad7299807&ipo=images
+//- Danjin: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwutheringwaves.gg%2Fwp-content%2Fuploads%2Fsites%2F8%2F2023%2F11%2FDanjin-Wuthering-Waves.jpg&f=1&nofb=1&ipt=790fdd70e30d5372a3effa691fa0527addf06ffaebeb5c4e6a6999754cd03c85&ipo=images
+//- Chixia: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbeebom.com%2Fwp-content%2Fuploads%2F2024%2F02%2Fchixia-wuthering-waves.jpg%3Fquality%3D75%26strip%3Dall&f=1&nofb=1&ipt=bfb185634204cbd782ec7cc4ef4b5314a88c0a6966afd11d29b96cb04391d6a1&ipo=images
+//- Aalto: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbeebom.com%2Fwp-content%2Fuploads%2F2024%2F02%2Faalto-wuthering-waves.jpg%3Fquality%3D75%26strip%3Dall&f=1&nofb=1&ipt=23814a584daecd9e4f9ec80b48bbfc2d5eefdc0263eaa59c64b309386f33b456&ipo=images
+//- Rover: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwp.clutchpoints.com%2Fwp-content%2Fuploads%2F2024%2F05%2Fwuthering-waves-spectro-rover-kit-skills-more.jpg&f=1&nofb=1&ipt=4717fd4e1178f2920795d08765f239141acae1905c89e91de2f22d18715f3a8f&ipo=images
+//- rover (havoc): https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.gameleap.com%2Fimages%2Farticles%2Fart_l6i7Q4um4D%2Ffeature%2F1x.webp&f=1&nofb=1&ipt=ed579903a53dcbf2ed2d445165635129456ab563a4a4e256c23798c807697507&ipo=images
+//- Lingyang: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.gamespace.com%2Fwp-content%2Fuploads%2F2024%2F05%2FWuthering-Waves-Check-Out-Lingyang-Resonator-Showcase.jpg&f=1&nofb=1&ipt=6eef2d93eaed50a7c10448a78b8c7cff66583ee9fb8c214fd612090015a7b619&ipo=images
+//- Jiyan: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pcinvasion.com%2Fwp-content%2Fuploads%2F2024%2F05%2Fjiyan-wuthering-waves.jpg&f=1&nofb=1&ipt=c53596e14f58958dd1ff5795909d277e3ddf0182e194a5dcd67264f01956d314&ipo=images
+//- Jinhsi: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdotesports.com%2Fwp-content%2Fuploads%2F2024%2F05%2FJinhsi-WuWa-1.jpg%3Fresize%3D1024&f=1&nofb=1&ipt=cd41577730fd6b84d55bc3bc7d401fb5ef36bd139f65c24330ad1cb109850d28&ipo=images
+//- Encore: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pcinvasion.com%2Fwp-content%2Fuploads%2F2024%2F05%2FWuthering-Waves-Encore.jpg&f=1&nofb=1&ipt=cda14cbbbd70513ff22221b30beec4f9dc85d78de5b6aa7e9bb9d4c7bdae8312&ipo=images
+//- Changli: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.dexerto.com%2Fcdn-image%2Fwp-content%2Fuploads%2F2024%2F05%2F28%2FChangli-Wuthering-Waves.jpg%3Fwidth%3D1200%26quality%3D75%26format%3Dauto&f=1&nofb=1&ipt=3e0a5ab14c20397f97f216bebf6ca32723ff20eee97e08accd52d29cc4ce386e&ipo=images
+
+
+
+
+
+
+
+
+
