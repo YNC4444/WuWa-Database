@@ -9,7 +9,7 @@ block layout-content
            li.card 
               div.cardContent
                 h3 Name: #{character.name}
-                img(src=`/images/${character.image}`, alt=character.name).CharacterImg
+                img(src=`/images/${character.image.toLowerCase()}`, alt=character.name).CharacterImg
                 .Facts.CharacterFacts 
                   div
                     h4 Rarity: 
