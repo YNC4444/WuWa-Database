@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const directory = './public/images'; // Adjust the path to your images directory
+const directory = './public/changed_images'; // Adjust the path to your images directory
 
 fs.readdir(directory, (err, files) => {
   if (err) {
